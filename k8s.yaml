@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cyg_survey
+  namespace: development
+spec:
+  selector:
+    matchLabels:
+      app: cyg_survey
+  template:
+    metadata:
+      labels:
+        app: cyg_survey
+    spec:
+      containers:
+      - image: 39.104.110.227:8031/cyg_survey/cyg_survey:<BUILD_TAG>
+        imagePullPolicy: IfNotPresent
+        name: cyg_survey
+        env:
+        - name: branch
+          value: <BRANCH_NAME>
+
+---
+kind: Service
+apiVersion: v1
+metadata:
+  labels:
+    app: cyg_survey
+  name: cyg_survey
+spec:
+  type: ClusterIP
+  ports:
+  - port: 80
+    name: http
+  selector:
+    app: cyg_survey
