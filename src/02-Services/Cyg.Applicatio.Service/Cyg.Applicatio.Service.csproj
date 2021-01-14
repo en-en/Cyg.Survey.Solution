@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Cyg.Applicatio.Entity" Version="1.0.302" />
+    <PackageReference Include="DotNettySocket" Version="1.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\04-Models\Cyg.Applicatio.Survey.Dto\Cyg.Applicatio.Survey.Dto.csproj" />
+  </ItemGroup>
+
+</Project>

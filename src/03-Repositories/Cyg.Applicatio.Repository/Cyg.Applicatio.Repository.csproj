@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Cyg" Version="1.0.123" />
+    <PackageReference Include="Cyg.Applicatio.Entity" Version="1.0.302" />
+    <PackageReference Include="Cyg.Extensions" Version="1.0.52" />
+    <PackageReference Include="Cyg.Extensions.Cap" Version="1.0.13" />
+    <PackageReference Include="Cyg.Extensions.Service" Version="1.0.120" />
+    <PackageReference Include="Microsoft.AspNetCore.WebSockets" Version="2.2.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\04-Models\Cyg.Applicatio.Survey.Dto\Cyg.Applicatio.Survey.Dto.csproj" />
+  </ItemGroup>
+
+</Project>

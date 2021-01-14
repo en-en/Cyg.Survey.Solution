@@ -1,0 +1,62 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+    <UserSecretsId>eb2721eb-12c2-4e62-8fdf-e301ead661ef</UserSecretsId>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>bin\Cyg.Application.Api.Survey.xml</DocumentationFile>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>bin\Cyg.Application.Api.Survey.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Logs\**" />
+    <Compile Remove="Properties\PublishProfiles\**" />
+    <Compile Remove="wwwroot\**" />
+    <Content Remove="Logs\**" />
+    <Content Remove="Properties\PublishProfiles\**" />
+    <Content Remove="wwwroot\**" />
+    <EmbeddedResource Remove="Logs\**" />
+    <EmbeddedResource Remove="Properties\PublishProfiles\**" />
+    <EmbeddedResource Remove="wwwroot\**" />
+    <None Remove="Logs\**" />
+    <None Remove="Properties\PublishProfiles\**" />
+    <None Remove="wwwroot\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Cyg.Extensions.WebApi" Version="1.0.129" />
+    <PackageReference Include="Cyg.LogX" Version="1.0.18" />
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.4" />
+    <PackageReference Include="Nuget.Tools.V2" Version="1.1.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\02-Services\Cyg.Applicatio.Service.Impl\Cyg.Applicatio.Service.Impl.csproj" />
+    <ProjectReference Include="..\..\03-Repositories\Cyg.Applicatio.Repository.Impl\Cyg.Applicatio.Repository.Impl.csproj" />
+    <ProjectReference Include="..\..\04-Models\Cyg.Applicatio.Survey.Dto\Cyg.Applicatio.Survey.Dto.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="C:\Users\LiuHao\.nuget\packages\cyg.nlog\1.0.24\contentFiles\any\netstandard2.0\nlog.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="C:\Users\LiuHao\.nuget\packages\cyg.nlog\1.0.8\contentFiles\any\netstandard2.0\nlog.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ProjectExtensions><VisualStudio><UserProperties appsettings_1Cy_1json__JSONSchema="https://json.schemastore.org/asmdef" /></VisualStudio></ProjectExtensions>
+
+</Project>

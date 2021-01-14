@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Cyg" Version="1.0.123" />
+    <PackageReference Include="Cyg.Extensions.AutoMapper" Version="1.0.18" />
+    <PackageReference Include="Cyg.Extensions.Reflection" Version="1.0.19" />
+    <PackageReference Include="Cyg.Extensions.Service" Version="1.0.120" />
+    <PackageReference Include="Cyg.Resource" Version="1.0.70" />
+    <PackageReference Include="DotNettySocket" Version="1.2.0" />
+    <PackageReference Include="WebApiClient.JIT" Version="1.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\03-Repositories\Cyg.Applicatio.Repository\Cyg.Applicatio.Repository.csproj" />
+    <ProjectReference Include="..\Cyg.Applicatio.Service\Cyg.Applicatio.Service.csproj" />
+  </ItemGroup>
+
+</Project>

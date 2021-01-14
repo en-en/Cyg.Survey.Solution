@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Authors>长园深瑞</Authors>
+    <Description>勘测端交换模型</Description>
+    <VersionPrefix>1.0.13</VersionPrefix>
+    <PackageReleaseNotes />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>bin\Cyg.Applicatio.Survey.Dto.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>bin\Cyg.Applicatio.Survey.Dto.xml</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Cyg" Version="1.0.123" />
+    <PackageReference Include="Cyg.Applicatio.Dto" Version="1.0.205" />
+    <PackageReference Include="Cyg.Resource" Version="1.0.70" />
+    <PackageReference Include="Cyg.Resource.Dto" Version="1.1.2" />
+    <PackageReference Include="FreeSql" Version="1.10.3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="FreeSql">
+      <HintPath>..\..\..\..\..\..\Users\Shinelon\Desktop\dllInfo\FreeSql.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Response\DbDto\" />
+  </ItemGroup>
+</Project>
